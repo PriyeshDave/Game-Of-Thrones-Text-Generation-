@@ -1,2 +1,40 @@
-# Game-Of-Thrones-Text-Generation-
+# Game-Of-Thrones-Text-Generation
 This is a classic Text Generation problem, using scriptures of famous books, Game of Thrones in this case. 
+
+![image](https://user-images.githubusercontent.com/81012989/169656678-d27b878a-3133-473f-9919-f242bd8bb8e1.png)
+
+## Introduction
+Developed an intelligent model that predicts the next n_words given a sequence of words based on a Markov's N-Grams assumption (predicting next word given preceeding 50 words in this case).
+
+## 🧾 Description: 
+The dataset is based on scriptures of famous books, **Game of Thrones**. The book has around 572 pages, however the data is trained on first 210 pages. The dataset is prepared from this raw text data by using Markov's assumption method where the entire text data is converted to lines of length 51 where the first 50 words acts as the independent features while the last word is kept as dependent feature.
+
+### :bar_chart: Exploratory Data Analysis:
+* Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge. 
+
+### :hourglass: Data Preprocessing:
+#### 1.) Data Cleaning:
+* The given data was cleaned & preprocessed by first removing the unwanted special characters and numbers from text.
+* The stop words in this case are not removed as it would change the contextual meaning of the text.
+* The preprocessed data is saved in **Cleaned-Text.txt** file.
+
+#### 2.) Vectorization:
+* I have used Keras Tokenizer library for tokenize the input sequences of length 50 each and assigned each word in the sequence with their respective index based on the vocabulary size of 7479.
+* The output words are one hot encoded using to_categorical method from tensorflow.keras.utils. 
+
+### ⚙ Model Training:
+The model is trained using **Sequential Model** with a 2 **LSTM layers** with 100 units each.
+* First I added the embedding layer which embedds the input sequences by representing each word with a vector of length 50 based on our vocabulary.
+* Next, I used Keras LSTM layer.
+* For the first LSTM layer, I have added 100 units that represent the dimensionality of outer space. The return_sequences parameter is set to true for returning the last output in output. 
+* Similarly, I added the other **LSTM** layer with 100 units again.
+* The next step is to add the dense layer with 100 hidden neurons followed by other dense layer with number of neurons equal our vocabulary size. I have used softmax activation function. This will give an output vector with length of our vocabulary size where each vector unit represents the probability of occuring of the respective word.
+* At last, my model is compiled with the help of **adam optimizer**. 
+* The error is computed using **categorical_crossentropy** and metric used is **accuracy**.
+* Finally, the model is fit using 450 epochs with a batch size of 512.
+
+
+* My trained model predicts the next words with an accuracy of 77.23%
+* As per the problem statement I used **accuracy** as the evaluation metric for my model.
+* Model: 'Game-Of-Thrones-Text-Generation-\Model\Word2Vec-Model-450-512.h5' or 
+https://drive.google.com/file/d/1-DN4FK0GcI-0RTFspWMe5U09ZMeMS_-5/view?usp=sharing
