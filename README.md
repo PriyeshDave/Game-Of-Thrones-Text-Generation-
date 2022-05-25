@@ -1,8 +1,7 @@
 # Game-Of-Thrones-Text-Generation
 This is a classic Text Generation problem, using scriptures of famous books, Game of Thrones in this case. 
 
-![image](https://user-images.githubusercontent.com/81012989/169656678-d27b878a-3133-473f-9919-f242bd8bb8e1.png)
-
+![image](https://user-images.githubusercontent.com/81012989/170167145-c95b1dad-4bdb-4ff5-90b7-acf5db8aeaa7.png)
 ## Introduction
 Developed an intelligent model that predicts the next n_words given a sequence of words based on a Markov's N-Grams assumption (predicting next word given preceeding 50 words in this case).
 
@@ -32,6 +31,7 @@ The model is trained using **Sequential Model** with a 2 **LSTM layers** with 10
 * At last, my model is compiled with the help of **adam optimizer**. 
 * The error is computed using **categorical_crossentropy** and metric used is **accuracy**.
 * Finally, the model is fit using 450 epochs with a batch size of 512.
+![model](https://user-images.githubusercontent.com/81012989/170167203-5c361f7d-4498-469e-af4f-32ec2fd4af98.png)
 
 
 * My trained model predicts the next words with an accuracy of 77.23%
