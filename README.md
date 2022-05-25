@@ -3,7 +3,7 @@ This is a classic Text Generation problem, using scriptures of famous books, Gam
 
 ![image](https://user-images.githubusercontent.com/81012989/170167145-c95b1dad-4bdb-4ff5-90b7-acf5db8aeaa7.png)
 ## Introduction
-Developed an intelligent model that predicts the next n_words given a sequence of words based on a Markov's N-Grams assumption (predicting next word given preceeding 50 words in this case).
+Developed an intelligent application that predicts the next n_words given a sequence of words based on a Markov's N-Grams assumption (predicting next word given preceeding 50 words in this case).
 
 ## 🧾 Dataset: 
 The dataset is based on scriptures of famous books, **Game of Thrones**. The book has around 572 pages, however the data is trained on first 210 pages. 
