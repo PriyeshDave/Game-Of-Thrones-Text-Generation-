@@ -5,21 +5,27 @@ This is a classic Text Generation problem, using scriptures of famous books, Gam
 ## Introduction
 Developed an intelligent model that predicts the next n_words given a sequence of words based on a Markov's N-Grams assumption (predicting next word given preceeding 50 words in this case).
 
-## 🧾 Description: 
-The dataset is based on scriptures of famous books, **Game of Thrones**. The book has around 572 pages, however the data is trained on first 210 pages. The dataset is prepared from this raw text data by using Markov's assumption method where the entire text data is converted to lines of length 51 where the first 50 words acts as the independent features while the last word is kept as dependent feature.
+## 🧾 Dataset: 
+The dataset is based on scriptures of famous books, **Game of Thrones**. The book has around 572 pages, however the data is trained on first 210 pages. 
 
 ### :bar_chart: Exploratory Data Analysis:
 * Exploratory Data Analysis is the first step of understanding your data and acquiring domain knowledge. 
 
 ### :hourglass: Data Preprocessing:
+#### 1.) Dataset preparation:
+* The dataset is prepared from this raw text data by using **Markov's assumption** method where the entire text data is converted to lines of length 51 where the first 50 words acts as the independent features while the last word is kept as dependent feature.
+* Below is the code sinippet for data preparation where the words highlighted in blue at [15] and [16] are the input sequences while the output word is highlighted in yellow. 
+
+<img width="926" alt="image" src="https://user-images.githubusercontent.com/81012989/170168276-2b3aea79-fe3a-45da-8037-2eff6206e052.png">
+
 #### 1.) Data Cleaning:
 * The given data was cleaned & preprocessed by first removing the unwanted special characters and numbers from text.
 * The stop words in this case are not removed as it would change the contextual meaning of the text.
 * The preprocessed data is saved in **Cleaned-Text.txt** file.
 
 #### 2.) Vectorization:
-* I have used Keras Tokenizer library for tokenize the input sequences of length 50 each and assigned each word in the sequence with their respective index based on the vocabulary size of 7479.
-* The output words are one hot encoded using to_categorical method from tensorflow.keras.utils. 
+* I have used **Keras Tokenizer library** to tokenize the input sequences of length 50 each and assigned each word in the sequence with their respective index based on the vocabulary size of 7479.
+* The output words are one hot encoded using **to_categorical** method from **tensorflow.keras.utils**. 
 
 ### ⚙ Model Training:
 The model is trained using **Sequential Model** with a 2 **LSTM layers** with 100 units each.
