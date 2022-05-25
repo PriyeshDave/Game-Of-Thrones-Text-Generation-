@@ -42,5 +42,5 @@ The model is trained using **Sequential Model** with a 2 **LSTM layers** with 10
 
 * My trained model predicts the next words with an accuracy of 77.23%
 * As per the problem statement I used **accuracy** as the evaluation metric for my model.
-* Model: **'Game-Of-Thrones-Text-Generation-\Model\Word2Vec-Model-450-512.h5'** 
-* https://drive.google.com/file/d/1-DN4FK0GcI-0RTFspWMe5U09ZMeMS_-5/view?usp=sharing
+* Model: **'Game-Of-Thrones-Text-Generation-\Model\Word2Vec-Model-450-512.h5'** <br>
+  https://drive.google.com/file/d/1-DN4FK0GcI-0RTFspWMe5U09ZMeMS_-5/view?usp=sharing
