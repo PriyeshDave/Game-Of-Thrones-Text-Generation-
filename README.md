@@ -1,6 +1,8 @@
 # Game-Of-Thrones-Text-Generation
 ![Python](https://img.shields.io/badge/Python-3.9-blueviolet)
 ![Machine Learning](https://img.shields.io/badge/-Machine%20Learning-blue)
+![Deep Learning](https://img.shields.io/badge/-Deep%20Learning-lightgrey)
+![Natural Language Processing](https://img.shields.io/badge/-NLP-yellow)
 ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red)
 
 This is a classic Text Generation problem, using scriptures of famous books, Game of Thrones in this case. 
